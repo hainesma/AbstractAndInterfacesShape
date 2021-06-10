@@ -11,9 +11,11 @@ namespace AbstractAndInterfacesShape
 
             Rectangle r = new Rectangle(10, 6);
             TestShape(r);
+
+            Circle c = new Circle(10);
         }
 
-        public static void TestShape(IShape s)
+        public static void TestShape(Shape s)
         {
             s.PrintInfo();
             double area = s.GetArea();

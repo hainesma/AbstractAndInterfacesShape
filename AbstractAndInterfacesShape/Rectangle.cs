@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AbstractAndInterfacesShape
 {
-    class Rectangle : IShape
+    class Rectangle : Shape
     {
         public double Length { get; set; }
         public double Width { get; set; }
@@ -15,19 +15,19 @@ namespace AbstractAndInterfacesShape
         }
 
 
-        public double GetArea()
+        public override double GetArea()
         {
             double area = Length * Width;
             return area;
         }
 
-        public double GetPerimeter()
+        public override double GetPerimeter()
         {
             double perimeter = Length * 2 + Width * 2;
             return perimeter;
         }
 
-        public void PrintInfo()
+        public override void PrintInfo()
         {
             Console.WriteLine("This is a rectangle.");
             Console.WriteLine("Length: " + Length);

@@ -4,34 +4,31 @@ using System.Text;
 
 namespace AbstractAndInterfacesShape
 {
-    class Square : Shape
+    class Shape
     {
-        public double Length { get; set; }
-        public Square(double Length)
-        {
-            this.Length = Length;
-        }
+        //properties go here if any
+        public int Length { get; set; }
+        public int Width { get; set; }
 
 
-        public override double GetArea()
+        // We won't use a constructor here because we don't want to force parameters on the children
+
+        public virtual double GetArea()
         {
             double area = Length * Width;
             return area;
         }
 
-        public override double GetPerimeter()
+        public virtual double GetPerimeter()
         {
             double perimeter = Length * 2 + Width * 2;
             return perimeter;
         }
 
-        public override void PrintInfo()
+        public virtual void PrintInfo()
         {
-            Console.WriteLine("This is a rectangle.");
             Console.WriteLine("Length: " + Length);
             Console.WriteLine("Width: " + Width);
-
-
         }
     }
 }
