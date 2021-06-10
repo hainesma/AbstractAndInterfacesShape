@@ -7,8 +7,8 @@ namespace AbstractAndInterfacesShape
     class Shape
     {
         //properties go here if any
-        public int Length { get; set; }
-        public int Width { get; set; }
+        public double Length { get; set; }
+        public double Width { get; set; }
 
 
         // We won't use a constructor here because we don't want to force parameters on the children

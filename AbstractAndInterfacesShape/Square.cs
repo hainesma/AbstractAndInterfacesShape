@@ -6,7 +6,7 @@ namespace AbstractAndInterfacesShape
 {
     class Square : Shape
     {
-        public double Length { get; set; }
+        
         public Square(double Length)
         {
             this.Length = Length;
